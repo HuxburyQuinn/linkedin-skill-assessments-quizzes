@@ -7,6 +7,13 @@
 - [ ] Create diverse and unnatural links
 - [ ] Distribute links in comment sections of websites
 
+#### Q1. Which choice is an example of a good backlink strategy?
+
+- [ ] Pasting your links in forums
+- [ ] Pasting your links on social media
+- [ ] Paying a website to feature your link
+- [x] Collaborating wit bloggers within you industry
+
 #### Q2. What is a key reason the URL `domain.com/apparel/jackets` is preferable to the URL `domain.com/p=141`?
 
 - [ ] It is longer
