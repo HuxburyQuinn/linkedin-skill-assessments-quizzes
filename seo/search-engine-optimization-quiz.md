@@ -6,6 +6,7 @@
 - [ ] Create an infographics and share it with relevant bloggers
 - [ ] Create diverse and unnatural links
 - [ ] Distribute links in comment sections of websites
+- [ ] 
 
 #### Q2. What is a key reason the URL `domain.com/apparel/jackets` is preferable to the URL `domain.com/p=141`?
 
