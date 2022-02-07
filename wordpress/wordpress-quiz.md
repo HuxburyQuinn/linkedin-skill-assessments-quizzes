@@ -347,19 +347,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 #### Q42. How can you add a custom script that needs to run only on the contact page of a site? The slug of the page is contact.
 
 ```
-Link to the script directly from a template named page-contact.php using the get_header() template tag, like this:
-get_header( '<script src="/my-script.js"></script>' );
-Use functions.php to conditionally load the script by hooking it to wp_enqueue_scripts(), like this:
-add_action( 'wp_enqueue_scripts', 'load_scripts' );
+[ ] Link to the script directly from a template named page-contact.php using the get_header() template tag, like this:
+```get_header( '<script src="/my-script.js"></script>' );```
+[ ] Use functions.php to conditionally load the script by hooking it to wp_enqueue_scripts(), like this:
+```add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 function load_scripts() {
     if ( is_page( 'contact' ) ) {
     echo '<script src="/my-script.js"></script>';
     }
-}
+}```
 
-Use functions.php to conditionally load the script by hooking it to wp_enqueue_scripts(), like this:
-add_action( 'wp_enqueue_scripts', 'load_scripts' );
+[X] Use functions.php to conditionally load the script by hooking it to wp_enqueue_scripts(), like this:
+```add_action( 'wp_enqueue_scripts', 'load_scripts' );
     function load_scripts() {
         if ( is_page( 'contact' ) ) {
         wp_enqueue_script( 'script', get_template_directory_uri() . '/script.js' );
@@ -367,10 +367,10 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
     }
 ```
 
-- [ ] Link to the script directly from a template named page-contact.php, like this:
-- [ ] <head>
-- [ ] <script src="/my-script.js"></script>
-- [ ] </head>
+[ ] Link to the script directly from a template named page-contact.php, like this:
+```<head>
+<script src="/my-script.js"></script>
+</head>```
 
 #### Q43. Where can you find the official WordPress documentation and usage guide?
 
@@ -391,7 +391,7 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 - [ ] Use the registerBlockName() function.
 - [ ] Use the createGutenBlock() function.
 - [ ] Use a block template.
-- [ ] Use the registerBlockType() function.
+- [x] Use the registerBlockType() function.
 
 #### Q46. Which software development principle, often used in WordPress, aims to reduce the repetition of code?
 
@@ -420,7 +420,7 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 #### Q49. On a regular WordPress install, what is the difference between transients and the object cache?
 
-- [ ] Transients are persistent and write to the wp_options. The object cache persists only for the particular page load.
+- [x] Transients are persistent and write to the wp_options. The object cache persists only for the particular page load.
 - [ ] Transients are stored in the WordPress database. The object cache is stored on the server where the WordPress install is located.
 - [ ] Transients are available for the duration of a user session and apply to all page components. The object cache is available only for scripts.
 - [ ] Transients persist only for the particular page load. The object cache is persistent and writes to the wp_options table.
@@ -429,13 +429,13 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 - [ ] Theme settings
 - [ ] wp-config.php
-- [ ] Customizer
+- [X] Customizer
 - [ ] WordPress settings
 
 #### Q51. You can harden your WordPress site security by adding `__` to your wp-config.php file?
 
 - [ ] database usernames and passwords
-- [ ] unique keys and salts
+- [X] unique keys and salts
 - [ ] accessibility
 - [ ] documentation
 
@@ -448,7 +448,7 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 #### Q53. If you have pretty permalinks enabled on a WordPress site, the REST API index is exposed by appending what to the end of the site URL? (for example, http://example.com/answer/) Note that the index provides information regarding which routes are available for that particular WordPress install.
 
-- [ ] `http://example.com/wp-json/`
+- [x] `http://example.com/wp-json/`
 - [ ] `http://example.com/wp-admin/`
 - [ ] `http://example.com/wp-rest/`
 - [ ] `http://example.com/wp-rest-api/`
@@ -517,10 +517,12 @@ $title = $_POST[ 'title' ];
 
 #### Q61. Which of these CSS classs naming convention is correct according to WordPress CSS Coding Standards?
 
-- [ ] `.selector-name`
-- [x] `.selector_name`
+- [x] `.selector-name`
+- [ ] `.selector_name`
 - [ ] `.selectorName`
 - [ ] `div.selector_name`
+**Explanation**: https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/
+
 
 #### Q62. Which folder in a WordPress install is not affected by an automatic WordPress update?
 
@@ -604,7 +606,7 @@ endif;
 
 - [ ] custom query
 - [ ] template tags
-- [ ] the Loop
+- [X] the Loop
 - [ ] nested loop
 
 #### Q71. Which of these are the minimum files required to make a child theme?
